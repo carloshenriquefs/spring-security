@@ -17,6 +17,8 @@ public class Tweet {
     @CreationTimestamp
     private Instant creationTimestamp;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
     public Long getTweetId() {
